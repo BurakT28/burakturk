@@ -7,11 +7,12 @@ namespace XamarinAllianceApp.Models
     public class Character
     {
         Int32 id;
+        Int32 year;
         string name;
-        string biography;
-        string gender;
+        string leadcharacter;
+        string info;
         float height;
-        string databankUrl;
+        string imageurl;
         ICollection<Weapon> weapons;
         ICollection<Movie> appearances;
 
@@ -22,6 +23,13 @@ namespace XamarinAllianceApp.Models
             set { id = value; }
         }
 
+        [JsonProperty(PropertyName = "year")]
+        public Int32 Year
+        {
+            get { return year; }
+            set { year = value; }
+        }
+
         [JsonProperty(PropertyName = "name")]
         public string Name
         {
@@ -29,18 +37,18 @@ namespace XamarinAllianceApp.Models
             set { name = value; }
         }
 
-        [JsonProperty(PropertyName = "gender")]
-        public string Gender
+        [JsonProperty(PropertyName = "info")]
+        public string Info
         {
-            get { return gender; }
-            set { gender = value; }
+            get { return info; }
+            set { info = value; }
         }
 
-        [JsonProperty(PropertyName = "biography")]
-        public string Biography
+        [JsonProperty(PropertyName = "leadcharacter")]
+        public string Leadcharacter
         {
-            get { return biography; }
-            set { biography = value; }
+            get { return leadcharacter; }
+            set { leadcharacter = value; }
         }
 
         [JsonProperty(PropertyName = "height")]
@@ -50,11 +58,11 @@ namespace XamarinAllianceApp.Models
             set { height = value; }
         }
 
-        [JsonProperty(PropertyName = "databankUrl")]
-        public string DatabankUrl
+        [JsonProperty(PropertyName = "imageurl")]
+        public string Imageurl
         {
-            get { return databankUrl; }
-            set { databankUrl = value; }
+            get { return imageurl; }
+            set { imageurl = value; }
         }
 
         [JsonProperty(PropertyName = "weapons")]

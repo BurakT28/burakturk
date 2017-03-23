@@ -2,5 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinAllianceApp.Views.DetailPage">
-  <Label Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="Center" />
-</ContentPage>
+  <ContentPage.BackgroundImage>
+    <OnPlatform x:TypeArguments="x:String"
+                Android="Resources/drawable/background.jpg"
+                    />
+  </ContentPage.BackgroundImage>
+
+  <ScrollView>
+    <StackLayout Padding="15" Spacing="10">
+      <Image Source="{Binding Imageurl}" />
+      <StackLayout>
+        <Label Text="{Binding Name}"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="{Binding Leadcharacter}"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="{Binding Year}"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="{Binding Info}"/>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+ </ContentPage>
+
